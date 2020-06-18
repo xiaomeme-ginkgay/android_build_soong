@@ -143,6 +143,10 @@ type variableProperties struct {
 			Whole_static_libs []string
 		}
 
+	        Qcom_um_soong_namespace struct {
+		        Cflags []string
+		        Header_libs []string
+           	}
 	} `android:"arch_variant"`
 }
 
@@ -311,6 +315,7 @@ type productVariables struct {
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Target_init_vendor_lib  *string `json:",omitempty"`
+	Qcom_um_soong_namespace  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
